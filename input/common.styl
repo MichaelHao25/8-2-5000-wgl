@@ -1,0 +1,1317 @@
+@import './reset.css'
+
+*
+    box-sizing border-box
+
+@media (min-width: 1260px)
+    .container
+        width 1230px
+
+input::placeholder
+    font-family 'microsoft Yahei'
+
+.ver-m
+    text-align center
+    font-size 0
+
+    &>*
+        display inline-block
+        vertical-align middle
+
+    .ver-m-middle
+        width 0
+        height 100%
+
+.main-container
+    @media (max-width: 767px)
+        padding-top 50px
+
+.public-header
+    position relative
+    z-index 2
+    background #003f98
+
+    @media (max-width: 767px)
+        position fixed
+        right 0
+        left 0
+        z-index 2
+        background #ffffff
+        text-align center
+
+    .mobile-menu
+        position absolute
+        top 50%
+        left 15px
+        width 50px
+        height 50px
+        background url('../img/cb52a4084a7e96cff255701c049a4723-32+22.png') left center no-repeat
+        cursor pointer
+        transform translateY(-50%)
+
+    .brand
+        height 88px
+
+        @media (max-width: 991px)
+            height 70px
+            text-align left
+
+            img
+                width 250px
+
+        @media (max-width: 767px)
+            display inline-block
+            float none !important
+            height 50px
+            text-align center
+
+            img
+                width 200px
+
+    .jd-tmall
+        padding-top 20px
+        width 450px
+        color #ffffff
+        line-height 28px
+
+        @media (max-width: 991px)
+            padding-top 10px
+            width 380px
+
+        h3
+            font-size 18px
+
+        h4
+            font-size 14px
+
+        .links
+            font-size 14px
+            opacity 0.7
+
+            span
+                padding 0 10px
+
+        .tel
+            font-size 12px
+
+            span
+                font-size 18px
+
+    .nav
+        padding-bottom 8px
+        transform translateZ(0)
+
+        &::-webkit-scrollbar
+            display none
+
+        @media (max-width: 767px)
+            position fixed
+            top 50px
+            right 0
+            bottom 72px
+            left 0
+            z-index 2
+            display none
+            overflow scroll
+            border-top 1px solid #b2b2b2
+            background #ffffff
+            -webkit-overflow-scrolling touch
+
+        .item
+            @media (max-width: 767px)
+                width 100%
+                border-bottom 1px solid #b2b2b2
+
+            a
+                display block
+                width 140px
+                height 36px
+                color #ffffff
+                text-align center
+                font-size 14px
+                line-height 36px
+                transition 0.3s
+
+                @media (max-width: 1260px)
+                    width 120px
+
+                @media (max-width: 1199px)
+                    width 80px
+
+                @media (max-width: 767px)
+                    position relative
+                    box-sizing border-box
+                    padding 0 20px
+                    width 100%
+                    height 50px
+                    color #666666
+                    text-align left
+                    font-size 20px
+                    line-height 50px
+
+                    &:after
+                        position absolute
+                        right 15px
+                        content '>'
+
+                &:hover, &.active
+                    background #0096ff
+
+                    @media (max-width: 767px)
+                        background none
+                        color #0096ff
+
+        .child-menu
+            position relative
+            z-index 3
+
+            &:hover, &.active
+                &:after
+                    opacity 1
+                    transition 0.3s 0.1s transform, 0.3s opacity
+                    transform rotateX(0)
+
+            &:after
+                position absolute
+                top 0
+                right 0
+                bottom 0
+                left 0
+                z-index -1
+                border 1px solid #0096ff
+                content ''
+                opacity 0
+                transition 0.3s transform, 0.3s 0.1s opacity
+                transform rotateX(180deg)
+
+                @media (max-width: 767px)
+                    display none
+
+            a
+                width 150px
+
+                @media (max-width: 1260px)
+                    width 130px
+
+                @media (max-width: 1199px)
+                    width 100px
+
+                @media (max-width: 767px)
+                    width 100%
+                    color #666666
+                    font-size 22px
+
+                &:hover, &.active
+                    background none
+                    color #0096ff
+
+                    span
+                        padding-right 16px
+
+                        @media (max-width: 767px)
+                            padding-right 0
+
+                        &:after
+                            border-top-color #0096ff
+
+                span
+                    position relative
+                    display inline-block
+                    transition 0.3s padding-right
+                    transform translateZ(0)
+
+                    @media (max-width: 767px)
+                        display block
+                        float left
+
+                    &:after
+                        position absolute
+                        top 50%
+                        right 0
+                        margin-top -4px
+                        border 8px solid transparent
+                        content ''
+                        transition 0.3s
+
+                        @media (max-width: 767px)
+                            display none
+
+            .child
+                position absolute
+                z-index 5
+                display none
+                padding-top 8px
+                background #003f98
+
+                @media (max-width: 767px)
+                    position static
+                    padding-top 0
+                    background none
+
+                .item
+                    @media (max-width: 767px)
+                        box-sizing border-box
+                        padding 0 30px
+                        border-top 1px solid #b2b2b2
+                        border-bottom none
+
+    .search-box
+        margin-bottom 8px
+        width 22px
+        height 36px
+        background url('') center center no-repeat
+
+.search-container
+    position absolute
+    right 0
+    left 0
+    z-index 2
+    display none
+    background rgba(#000, 0.5)
+
+    .fz0
+        padding 30px 0
+        text-align center
+        font-size 0
+
+    .input, .btn
+        display inline-block
+        vertical-align top
+
+    .input
+        box-sizing border-box
+        padding 8px
+        max-width 530px
+        width 80%
+        height 40px
+        outline none
+        border 1px solid #ffff
+        border-right none
+        background none
+        color #ffffff
+        font-size 16px
+
+        &::placeholder
+            color #ffffff
+            opacity 0.27
+
+    .btn
+        max-width 90px
+        width 20%
+        background #0096ff
+        color #ffffff
+        text-align center
+        font-size 16px
+        line-height 40px
+
+.swiper-bannner
+    .swiper-wrapper
+        img, a
+            display block
+            margin 0 auto
+            max-width 1920px
+            width 100%
+
+    .swiper-pagination
+        bottom 35px
+        font-size 0
+
+    .swiper-pagination-bullet
+        margin 0 16px
+        width 12px
+        height 12px
+        background #0096ff
+        opacity 1
+
+    .swiper-pagination-bullet-active
+        background #ffffff
+
+.public-title
+    h3
+        position relative
+        padding-bottom 10px
+        color #020202
+        text-align center
+        font-size 30px
+
+        &:after
+            position absolute
+            bottom 0
+            left 50%
+            margin-left -50px
+            width 100px
+            border-top 1px solid #0096ff
+            content ''
+
+.index-photo-grid
+    padding 100px 0 80px
+
+    .ml-10
+        margin-left -10px
+        padding-top 40px
+
+    .item
+        overflow hidden
+        margin-bottom 10px
+        margin-left 10px
+        height 395px
+
+        @media (max-width: 1199px)
+            height 350px
+
+        @media (max-width: 991px)
+            height auto
+
+        a
+            position relative
+            display block
+            width 100%
+            height 100%
+            text-align center
+
+            &:hover
+                .layout
+                    transform translateY(0)
+
+        .pic
+            height 100%
+            background url('') center center / cover no-repeat
+
+            @media (max-width: 991px)
+                padding-top 80%
+
+        .layout
+            position absolute
+            right 0
+            bottom 0
+            left 0
+            height 40px
+            background rgba(#000, 0.65)
+            color #ffffff
+            font-size 16px
+            line-height 40px
+            transition 0.3s
+            transform translateY(100%)
+
+    .w80
+        width 1200px * 0.65
+
+        @media (max-width: 1259px)
+            width 1140px * 0.65
+
+        @media (max-width: 1199px)
+            width 940px * 0.65
+
+        @media (max-width: 991px)
+            width calc(100% - 10px)
+
+    .w20
+        width (1200px * 0.35) - 10px
+
+        @media (max-width: 1259px)
+            width (1140px * 0.35) - 10px
+
+        @media (max-width: 1199px)
+            width (940px * 0.35) - 10px
+
+        @media (max-width: 991px)
+            width calc(50% - 10px)
+
+    .w40
+        width (1200px * 0.325) - 5px
+
+        @media (max-width: 1259px)
+            width (1140px * 0.325) - 5px
+
+        @media (max-width: 1199px)
+            width (940px * 0.325) - 5px
+
+        @media (max-width: 991px)
+            width calc(50% - 10px)
+
+.index-case
+    padding 40px 0
+    background #f8f8f8
+
+    .case-swiper
+        padding-top 40px
+
+        .swiper-pagination
+            text-align left
+            font-size 0
+
+            @media (max-width: 991px)
+                text-align center
+
+            span
+                width 12px
+                height 12px
+                border 3px solid #0096ff
+                background #ffffff
+                opacity 1
+
+                &.swiper-pagination-bullet-active
+                    background-color #0096ff
+
+    .case
+        background #f8f8f8
+
+        .pic
+            max-width 50%
+            width 600px
+
+            @media (max-width: 991px)
+                max-width 100%
+                width 100%
+
+            img
+                width 100%
+
+        .content
+            max-width 50%
+            width 537px
+
+            @media (max-width: 991px)
+                padding-bottom 40px
+                max-width 100%
+                width 100%
+
+            .id
+                max-width 280px
+                width 100%
+                border-bottom 1px solid #c2c0c0
+                color #474646
+                font-style italic
+                font-size 48px
+                line-height 105px
+
+            p
+                padding-top 40px
+                color #666666
+                font-size 16px
+                line-height 26px
+
+.index-humanity
+    padding 70px 0
+
+    .humanity-swiper
+        padding-top 40px
+
+        a, img
+            display block
+            width 100%
+
+        h4
+            padding-top 15px
+            color #666666
+            text-align center
+            font-size 14px
+
+        .swiper-button-prev, .swiper-button-next
+            margin-top -36px
+            width 38px
+            height 72px
+            background-size auto auto
+
+        .swiper-button-prev
+            left 0
+            background-image url('../img/9e23ec0c4291d6e85c31f7bc2cb4b6e6-38+72.jpg')
+
+        .swiper-button-next
+            right 0
+            background-image url('../img/a5ea89d4c258ddda3140626d7e5f338e-38+72.jpg')
+
+.index-dream
+    padding 40px 0
+    background #f8f8f8
+
+    .layout-text
+        position relative
+        padding-top 50px
+
+        img
+            display block
+            width 100%
+
+        h3
+            position relative
+            z-index 1
+            margin 0 auto -30px
+            width 600px
+            height 80px
+            background #0096ff
+            color #ffffff
+            text-align center
+            font-size 24px
+            line-height 80px
+
+            @media (max-width: 991px)
+                margin-bottom 0
+                width auto
+
+        .text
+            position absolute
+            right 0
+            bottom 0
+            box-sizing border-box
+            padding 30px 52px 0
+            width 870px
+            background #f8f8f8
+
+            @media (max-width: 991px)
+                position static
+                box-sizing border-box
+                padding-right 0
+                padding-left 0
+                width auto
+
+            h4
+                padding-bottom 24px
+                color #030303
+                font-size 36px
+                line-height 46px
+
+            p
+                color #666666
+                font-size 22px
+                line-height 32px
+
+    .item
+        cursor pointer
+
+        &.item-1
+            &:hover, &.active
+                .pic
+                    background-image url('../img/8f3d4123dce758d8faa9e95b2bb031cf-44+47.png')
+
+                h4
+                    color #0096ff
+
+            .pic
+                background-image url('../img/d3bfd20fa9b9d96681c5a4f74fd35234-44+47.png')
+
+        &.item-2
+            &:hover, &.active
+                .pic
+                    background-image url('../img/f4de679eca91b93745336f97e5ec9223-47+47.png')
+
+                h4
+                    color #0096ff
+
+            .pic
+                background-image url('../img/a25aa617b1167ea69fd78bf49328114e-47+47.png')
+
+        &.item-3
+            &:hover, &.active
+                .pic
+                    background-image url('../img/7afd53778fce312c2d6047a3eed1130f-47+47.png')
+
+                h4
+                    color #0096ff
+
+            .pic
+                background-image url('../img/ec68bbacae8cc424a3e96eefaa657c2f-47+47.png')
+
+        .pic
+            height 110px
+            background url('') center center no-repeat
+            transition 0.3s
+
+        h4
+            color #666666
+            text-align center
+            font-size 24px
+            transition 0.3s
+
+.index-join
+    padding-bottom 125px
+    height 600px
+    background url('../img/7457e66db828a6c035afd1f5f9845663-1920+600.jpg') center top no-repeat
+
+    h3
+        color #ffffff
+        font-size 30px
+
+    p
+        padding 50px 0 60px
+        max-width 500px
+        color #ffffff
+        font-size 14px
+        line-height 30px
+
+        @media (max-width: 767px)
+            margin 0 auto
+            width 80%
+
+    a
+        display block
+        margin 0 auto
+        width 180px
+        height 40px
+        border 1px solid #fff
+        background transparent
+        color #ffffff
+        text-align center
+        font-size 24px
+        line-height 40px
+        transition 0.3s
+
+        &:hover
+            border-color #0096ff
+            background #0096ff
+            color #ffffff
+
+.footer
+    .footer-menu
+        padding 60px 0 60px
+        background #f8f8f8
+
+        .menu
+            display flex
+            border-left 1px solid #d3d3d3
+
+            @media (max-width: 991px)
+                flex-wrap wrap
+
+            .item
+                flex auto
+                float left
+                box-sizing border-box
+                padding 0 15px
+                border-right 1px solid #d3d3d3
+                text-align left
+
+                @media (max-width: 1259px)
+                    padding 0 10px
+
+                @media (max-width: 1199px)
+                    margin-bottom 30px
+                    padding 0 15px
+
+                @media (max-width: 991px)
+                    flex 1 0 33.33%
+                    width 33.33%
+
+                h3
+                    color #666666
+                    white-space nowrap
+                    font-size 16px
+
+                a
+                    white-space nowrap
+                    transition 0.3s
+
+                    &:hover
+                        color #0096ff
+
+                .link-group
+                    padding-top 17px
+                    color #666666
+                    font-size 12px
+                    line-height 24px
+
+                    a
+                        display block
+
+        .qrcode
+            margin 0 auto
+            width 90%
+            border 1px solid #000
+
+            img
+                display block
+                width 100%
+
+            h3
+                color #666666
+                text-align center
+                font-size 16px
+                line-height 26px
+
+        .more-info
+            @media (max-width: 767px)
+                margin 0 auto
+                max-width 400px
+                width 70%
+
+            .brand
+                display block
+
+                img
+                    display block
+                    width 100%
+
+            .tel
+                padding-top 100px
+                color #666666
+                font-size 24px
+
+                @media (max-width: 1259px)
+                    font-size 20px
+
+                @media (max-width: 767px)
+                    padding 20px 0
+
+                span
+                    display block
+                    font-size 14px
+
+    .copy-right
+        padding 15px 0
+        background #000000
+        color #ffffff
+        font-size 12px
+        line-height 30px
+
+        @media (max-width: 1199px)
+            .pull-left, .pull-right
+                width 100%
+                text-align center
+
+        span, a, img
+            vertical-align middle
+
+        span, a
+            padding 0 5px
+
+.mobile-footer
+    position fixed
+    right 0
+    bottom 0
+    left 0
+    z-index 2
+    background #f9f9f9
+
+    .df
+        display flex
+        justify-content space-between
+
+        a
+            display block
+            padding 10px 0
+            width 120px
+            text-align center
+
+            &:nth-child(1)
+                .pic
+                    background-image url('../img/4a74209bbad3c2171900a87c88fbb3e9-44+44.png')
+
+            &:nth-child(2)
+                .pic
+                    background-image url('../img/39e2246e4dca07609e6f7df22cb299e0-40+38.png')
+
+            &:nth-child(3)
+                .pic
+                    background-image url('../img/9b3858767d996722a8f0fdd3e024f411-30+44.png')
+
+            &:nth-child(1)
+                &:hover
+                    .pic
+                        background-image url('../img/ac84e16c691370e071d1f6abfa49ba4e-44+44.png')
+
+            &:nth-child(2)
+                &:hover
+                    .pic
+                        background-image url('../img/aafc839f089f5cde308fde9e95c3aaea-40+38.png')
+
+            &:nth-child(3)
+                &:hover
+                    .pic
+                        background-image url('../img/ef1c8535698e01f37335f096d42d204f-30+44.png')
+
+            &:hover
+                h4
+                    color #0096ff
+
+        .pic
+            width 100%
+            height 30px
+            background url('') center center / auto 80% no-repeat
+            transition 0.3s
+
+        h4
+            color #3c3c3c
+            font-size 16px
+            transition 0.3s
+
+.loadimg
+    background-image:
+        url('../img/ac84e16c691370e071d1f6abfa49ba4e-44+44.png'),
+        url('../img/aafc839f089f5cde308fde9e95c3aaea-40+38.png'),
+        url('../img/ef1c8535698e01f37335f096d42d204f-30+44.png')
+
+.bannner-no-js
+    a, img
+        display block
+        margin 0 auto
+        max-width 1920px
+        width 100%
+
+// story!
+.brand-block
+    .brand-menu
+        &.four-child
+            .item
+                width (100% / 4)
+
+        .item
+            position relative
+            display block
+            box-sizing border-box
+            width (100% / 6)
+            background #f2f2f2
+            color #313030
+            text-align center
+            font-size 14px
+            line-height 55px
+            transition 0.3s
+
+            @media (max-width: 767px)
+                width (100% / 3)
+
+                &:nth-child(4n)
+                    border-left none !important
+
+            &:after
+                position absolute
+                top 0
+                left 50%
+                margin-left -10px
+                border 10px solid transparent
+                content ''
+                transition 0.3s
+
+            &:hover, &.active
+                background #0096ff
+                color #ffffff
+
+                &:after
+                    border-top-color #fff
+
+            &+.item
+                border-left 1px solid #bbb9b9
+
+    .brand-story
+        padding 84px 0 128px
+
+        .content
+            margin-top 40px
+            padding 70px 0
+            background #f4f4f4
+
+            .pic
+                @media (max-width: 991px)
+                    padding-bottom 20px
+
+                img
+                    display block
+                    width 100%
+
+            h4
+                padding-bottom 10px
+                color #000000
+                font-size 24px
+                line-height 34px
+
+            p
+                padding 15px 0 0
+                color #000000
+                font-size 12px
+                line-height 24px
+
+            .bdt-b
+                margin-top 5px
+                border-top 1px solid #bbb9b9
+
+                p
+                    padding-bottom 15px
+                    border-bottom 1px solid #bbb9b9
+
+    .maintenance-and-recovery
+        .how-to-do
+            padding 90px 0 80px
+
+            .text
+                padding 30px 0
+                color #003f98
+                text-align center
+                font-size 14px
+                line-height 24px
+
+            .pic-group
+                .fl
+                    width (704 / 1200) * 100%
+
+                    @media (max-width: 767px)
+                        width 100%
+
+                .fr
+                    width (486 / 1200) * 100%
+
+                    @media (max-width: 767px)
+                        margin-top 15px
+                        width 100%
+
+        .steps
+            padding 40px 15px 0 15px
+            background #f3f3f3
+
+            .pb40
+                padding-bottom 40px
+
+            .item
+                padding-bottom 30px
+                padding-left 1em
+                color #000000
+                text-indent -1em
+                font-size 14px
+                line-height 24px
+
+    .advantage
+        padding 80px 0 120px
+
+        .df
+            display flex
+
+            @media (max-width: 991px)
+                display block
+
+        .pb50
+            padding-bottom 50px
+
+        .bg003f98
+            display flex
+            flex-direction column
+            justify-content center
+            align-items center
+            padding 0 30px
+            background #003f98
+
+            @media (max-width: 991px)
+                display block
+                padding 30px 15px
+
+        .w50
+            width 50%
+
+            @media (max-width: 991px)
+                width 100%
+
+            img
+                display block
+                width 100%
+
+            p
+                color #ffffff
+                font-size 14px
+                line-height 24px
+
+    .revolution
+        padding 100px 0
+
+        p
+            padding 50px 0
+            color #666666
+            text-indent 2em
+            font-size 14px
+            line-height 24px
+
+        .item
+            @media (max-width: 991px)
+                margin 0 auto
+                padding-bottom 20px
+                max-width 500px
+
+            .pic
+                img
+                    display block
+                    width 100%
+
+            h4
+                padding 10px 0 0
+                color #404040
+                font-size 18px
+                line-height 28px
+
+            p
+                padding 0
+                text-indent 0
+                font-size 12px
+
+        .tips
+            margin-top 120px
+            padding 80px 0
+            background #0096ff
+            color #ffffff
+            text-align center
+            font-size 18px
+            line-height 28px
+
+    .wc-culture
+        padding 100px 0
+
+        .item
+            padding-top 50px
+
+            .pic
+                width (500 / 1200) * 100%
+
+                @media (max-width: 991px)
+                    width 100%
+
+                img
+                    display block
+                    width 100%
+
+            .content
+                padding 30px
+                width (700 / 1200) * 100%
+                background #f3f3f3
+                color #666666
+                font-size 14px
+                line-height 24px
+
+                @media (max-width: 991px)
+                    padding 15px
+                    width 100%
+
+                p
+                    &+p
+                        padding-top 30px
+
+                        @media (max-width: 991px)
+                            padding-top 15px
+
+            .mih310
+                min-height 310px
+
+                @media (max-width: 991px)
+                    min-height auto
+
+            .mih293
+                min-height 293px
+
+                @media (max-width: 991px)
+                    min-height auto
+
+        .pb100
+            padding-bottom 100px
+
+    .product-design
+        padding 70px 0 100px
+
+        a
+            display block
+        .pic
+            margin-top 30px
+            img
+                display block
+                width 100%
+
+        h3
+            background #e3e3e3
+            color #000000
+            text-align center
+            font-size 14px
+            line-height 44px
+
+    .beautiful-china
+        padding 80px 0 120px
+
+        .pic-grid
+            padding-top 80px
+            width 100%
+
+            div
+                padding-top (385 / 1200) * 100%
+                width 33.33%
+                background url('') center center / 100% auto no-repeat
+
+        p
+            margin-top 80px
+            padding 40px 25px
+            min-height 240px
+            background #f8f8f8
+            color #666666
+            font-size 14px
+            line-height 24px
+
+            @media (max-width: 991px)
+                margin-top 15px
+                padding 15px
+                min-height auto
+
+    .when-revolution-is-going-on
+        padding 80px 0 100px
+
+        .two-columns
+            padding 40px 0 80px
+
+            .mt30
+                display block
+
+                @media (max-width: 991px)
+                    margin-top 30px
+
+            .pic
+                position relative
+
+                img
+                    display block
+                    width 100%
+
+                .layear
+                    position absolute
+                    right 0
+                    bottom 0
+                    left 0
+                    padding 10px 0
+                    background rgba(#000, 0.5)
+                    color #ffffff
+                    text-align center
+                    font-size 14px
+                    line-height 24px
+
+        .one-columns
+            padding-top 40px
+
+            .df
+                display flex
+
+                @media (max-width: 991px)
+                    display block
+                    float none
+
+            .ffr
+                flex-flow row-reverse
+
+            .w50
+                min-height 384px
+                width 50%
+                background #f8f8f8
+
+                @media (max-width: 991px)
+                    min-height auto
+                    width 100%
+
+                .pic
+                    img
+                        display block
+                        width 100%
+
+                .content
+                    padding 25px
+
+                    @media (max-width: 1199px)
+                        padding 15px
+
+                    h4
+                        padding-bottom 20px
+                        color #666666
+                        font-size 24px
+                        line-height 34px
+
+                        @media (max-width: 991px)
+                            padding-bottom 10px
+
+                    p
+                        color #666666
+                        font-size 14px
+                        line-height 24px
+
+    .scientific-research-strength
+        padding 100px 0
+
+        .clear
+            display flex
+            margin-bottom 30px
+            background #0096ff
+
+            @media (max-width: 991px)
+                display block
+
+        .ffr
+            flex-flow row-reverse
+
+        .w50
+            width 50%
+
+            @media (max-width: 991px)
+                width 100%
+
+            .pic
+                img
+                    display block
+                    width 100%
+
+            .content
+                box-sizing border-box
+                padding 40px
+                min-height 380px
+
+                @media (max-width: 1260px)
+                    min-height 361px
+
+                @media (max-width: 1199px)
+                    min-height 297.66px
+
+                @media (max-width: 991px)
+                    padding 15px
+                    min-height auto
+
+                h4
+                    padding-bottom 20px
+                    color #ffffff
+                    font-size 24px
+                    line-height 34px
+
+                    @media (max-width: 991px)
+                        padding-bottom 10px
+                        font-size 20px
+                        line-height 30px
+
+                p
+                    padding-bottom 20px
+                    color #ffffff
+                    font-size 18px
+                    line-height 28px
+                    opacity 0.6
+
+                    @media (max-width: 991px)
+                        padding-bottom 10px
+                        font-size 14px
+                        line-height 24px
+
+.case-block
+    padding 40px 0 100px
+    .pic
+        padding-top 40px
+        img
+            display block
+            width 100%
+
+    .content
+        h4
+            padding-top 25px
+            color #000000
+            font-size 24px
+            line-height 34px
+
+        p
+            color #666666
+            font-size 18px
+            line-height 28px
+        a
+            display block
+            margin 70px auto 0
+            font-size 14px
+            color #666666
+            line-height 28px
+            width 150px
+            text-align center
+            height 30px
+            border 1px solid #2fa9ff
+            transition 0.3s
+            &:hover
+                background #2fa9ff
+                color #ffffff
